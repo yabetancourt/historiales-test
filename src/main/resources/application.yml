@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/historial
+    username: postgres
+    password: 123
+    hikari:
+      maximumPoolSize: 500
+      minimumIdle: 20
+      idleTimeout: 60000
+      connectionTimeout: 600000
+      maxLifetime: 1800000
+      validationTimeout: 3000
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update #   update/validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        max_fetch_depth: 0
